@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理系统</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="clearfix">
+		<div class="headlogo left">
+			<h2><a href="#">系统管理</a></h2>
+		</div>
+		<ul class="headnav left" id="headnav">
+			<li id="menu_0" class="current_menu">
+				<a href="#">菜单管理</a>
+			</li>
+			<li id="menu_1">
+				<a href="#">模块管理</a>
+			</li>
+			<li id="menu_2">
+				<a href="#">系统设置</a>
+			</li>
+			<li id="menu_3">
+				<a href="#">扩展管理</a>
+			</li>
+		</ul>
+		<ul class="headlink right clearfix">
+			<li id="link_0">
+				<a href="#">你好，admin</a>
+			</li>
+			<li id="link_1">
+				<a href="#">隐藏菜单</a>
+			</li>
+			<li id="link_2">
+				<a href="#">首页</a>
+			</li>
+			<li id="link_3">
+				<a href="#">帮助</a>
+			</li>
+			<li id="link_4">
+				<a href="#">退出</a>
+			</li>
+		</ul>
+	</header>
+
+	<div id="leftmenu" class="leftmenu">
+		<div id="leftmenu_0" class="leftmenu-item">
+			<dl>
+				<dt>栏目管理</dt>
+				<dd>
+					<ul class="clearfix">
+						<li>
+							<a href="javascript:;" _link="column_administer.html">栏目管理</a>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>内容管理</dt>
+				<dd>
+					<ul class="clearfix">
+						<li>
+							<a href="javascript:;" _link="about_us.html">公司介绍</a>
+						</li>
+						<li><a href="javascript:;">新闻中心</a></li>
+						<li><a href="javascript:;">产品展示</a></li>
+						<li><a href="javascript:;">公司相册</a></li>
+						<li><a href="javascript:;">联系我们</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>快捷面板</dt>
+				<dd>
+					<ul class="clearfix">
+						<li><a href="javascript:;">广告管理</a></li>
+						<li><a href="javascript:;">公告管理</a></li>
+						<li><a href="javascript:;">友情链接</a></li>
+						<li><a href="javascript:;">留言板管理</a></li>
+						<li><a href="javascript:;">评论管理</a></li>
+						<li><a href="javascript:;">清楚系统缓存</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div id="leftmenu_1" class="leftmenu-item" style="display: none">
+			<dl>
+				<dt>系统设置</dt>
+				<dd>
+					<ul class="clearfix">
+						<li><a href="javascript:;">网站设置</a></li>
+						<li><a href="javascript:;">伪静态|缓存设置</a></li>
+						<li><a href="javascript:;">在线客服设置</a></li>
+						<li><a href="javascript:;">清除系统缓存</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>静态缓存</dt>
+				<dd>
+					<ul class="clearfix">
+						<li><a href="javascript:;">一键更新全站</a></li>
+						<li><a href="javascript:;">更新首页</a></li>
+						<li><a href="javascript:;">更新栏目</a></li>
+						<li><a href="javascript:;">更新文档</a></li>
+						<li><a href="javascript:;">更新专题</a></li>
+					</ul>
+				</dd>
+			</dl>		
+		</div>
+
+		<div id="leftmenu_2" class="leftmenu-item" style="display: none">
+			<dl>
+				<dt>会员管理</dt>
+				<dd>
+					<ul class="clearfix">
+						<li><a href="javascript:;">会员管理</a></li>
+						<li><a href="javascript:;">会员组管理</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>管理员管理</dt>
+				<dd>
+					<ul class="clearfix">
+						<li><a href="javascript:;">系统用户管理</a></li>
+						<li><a href="javascript:;">用户组管理</a></li>
+						<li><a href="javascript:;">节点管理</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div id="leftmenu_3" class="leftmenu-item" style="display: none">
+			<dl>
+				<dt>扩展管理</dt>
+				<dd>
+					<ul class="clearfix">
+						<li><a href="javascript:;">模型管理</a></li>
+						<li><a href="javascript:;">菜单管理</a></li>
+						<li><a href="javascript:;">数据库管理</a></li>
+						<li><a href="javascript:;">联动管理</a></li>
+						<li><a href="javascript:;">区域管理</a></li>
+						<li><a href="javascript:;">数据元管理</a></li>
+						<li><a href="javascript:;">已传文件管理</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>我的账户</dt>
+				<dd>
+					<ul class="clearfix">
+						<li><a href="javascript:;">修改我的信息</a></li>
+						<li><a href="javascript:;">修改密码</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	
+	<div class="rightmain">
+		<div class="rightcontent">
+			<iframe src="main.html" frameborder="0" id="main" name="main" scrolling="yes"></iframe>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script>
+		$("#headnav li").on("click",function(){
+			var _id = $(this).index();
+			// 顶部导航切换
+			$(this).addClass("current_menu").siblings().removeClass("current_menu");
+			// 顶部导航和左边导航相关联
+			$(".leftmenu").find(".leftmenu-item").eq(_id).css("display","block").siblings().css("display","none");
+		});
+		// 左边导航的列表收缩
+		$(".leftmenu dl dt").on("click",function(){
+			$(this).siblings("dd").slideToggle();
+		});
+		// 一键隐藏左边导航
+		$("#link_1").on("click",function(){
+			if(false === $("#leftmenu").is(":visible")){
+				$("#leftmenu").css("display","block").addClass("show");
+				$(this).children('a').text('隐藏菜单');
+				 $('body').addClass('showleftmenu').removeClass('hideleftmenu');
+			}else{
+				$("#leftmenu").css("display","none");
+				$(this).children('a').text('显示菜单');
+				$('body').addClass('hideleftmenu').removeClass('showleftmenu');
+			}
+		})
+		// 左边导航和右边内容关联
+		$("#leftmenu").find("a").on("click",function(){
+			var _link = $(this).attr("_link");
+			$(".rightcontent iframe").attr("src",_link);
+			$("#leftmenu").find("a").removeClass("current-menuleft");
+			$(this).addClass("current-menuleft");
+		})
+	</script>
+</body>
+</html>
